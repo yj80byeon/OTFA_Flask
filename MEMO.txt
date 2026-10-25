@@ -1,4 +1,9 @@
 
+## 의존성 파일 작성/설치
+pip freeze > requirements.txt
+pip install -r requirements.txt
+
+
 ## GIT 설정 ##
 1. user name/email 설정
     git config --global user.name "dev-user"
@@ -31,18 +36,15 @@
     - VSCode 화면 갱신
         Ctrl+Shift+P 누른 후
         Developer:Reload Window 선택
-
-
-
-
-
-
-
-
-
-## 의존성 파일 작성/설치 ##
-pip freeze > requirements.txt
-pip install -r requirements.txt
+13. 기존 레포지토리에 연결하려면
+    - 레포지토리 연결 해제
+    - 현재 연결 레포지토리 확인 : 없어야 한다.
+    - Git-Hub에서 연결 할 레포지토리 주소 확인 (https://github.com/USER_NAME/repository_name.git)
+    - git 연결
+      git remote add origin https://github.com/USER_NAME/repository_name.git
+    - 연결상태 확인 : 연결 주소가 보여야 한다.
+    - 연결저장소 변경사항 Pull해옴(동기화) : git pull --rebase origin main
+    - 로컬저장소 내용 push : git push -u origin main
 
 
 ## Docker 명령어 ##
