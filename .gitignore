@@ -1,0 +1,39 @@
+# Virtual environment
+
+.venv/ venv/ env/
+
+# Python cache files
+
+pycache/ *.py[cod] *$py.class
+
+# Distribution and build files
+
+build/ dist/ *.egg-info/ .eggs/
+
+# Test and coverage
+
+.pytest_cache/ .coverage htmlcov/
+
+Environment variables and secrets
+
+.env .env.* !.env.example
+
+# IDE and editor settings
+
+.vscode/ .idea/
+
+# OS generated files
+
+.DS_Store Thumbs.db
+
+# Logs
+
+*.log
+
+# Jupyter Notebook
+
+.ipynb_checkpoints/
+
+# Type checking and linting
+
+.mypy_cache/ .pyright/ .ruff_cache/ .tox/ .nox/
