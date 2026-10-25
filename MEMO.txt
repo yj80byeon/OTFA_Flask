@@ -4,6 +4,24 @@ pip freeze > requirements.txt
 pip install -r requirements.txt
 
 
+## 가상환경 생성/실행/종료 ##
+1. 생성
+    python3 -m venv .venv
+2. 활성
+    Linux   source .venv/bin/activate
+    Windows .venv/Scripts/Activate
+3. 종료
+    deactivate
+
+
+## 로컬에서 Docker를 사용하지 않고 Flask app 실행 :##
+    - 가상환경 실행 : .venv/bin/activate
+    1. 개발서버 
+        - python3 -m flask --app wsgi run --debug
+    2. Gunicorn으로 실행
+        - gunicorn --bind 127.0.0.1:5000 wsgi:app
+       
+
 ## GIT 설정 ##
 1. user name/email 설정
     git config --global user.name "dev-user"
