@@ -1,0 +1,84 @@
+
+## GIT 설정 ##
+1. user name/email 설정
+    git config --global user.name "dev-user"
+    git config --global user.email "dev-user@example.com"
+2. 설정내용 확인
+    git config --global --list
+3. 프로젝트 폴더 내에서 리스트 확인
+    ls -la    
+4. Git 이니셜
+    git init
+5. 원격저장소 연결 확인
+    git remote -v
+6. 변경사항 확인
+    git status
+7. 파일 추가
+    git add .
+8. 커밋 명령
+    git commit -m "Your Commit Message"
+9. 푸쉬 명령
+    git push
+    git push -u origin main    
+10. 로그 확인
+    git log --online    
+11. Git 연결 해제
+    git remote remove origin
+12. Git 레포지토리 연결해제
+    - 프로젝트폴더 내 .git 파일을 삭제 함
+        ls -la  : 프로젝트 폴더의 모든 파일 확인  
+        rm -rf .git : .git 파일을 삭제
+    - VSCode 화면 갱신
+        Ctrl+Shift+P 누른 후
+        Developer:Reload Window 선택
+
+
+
+
+
+
+
+
+
+## 의존성 파일 작성/설치 ##
+pip freeze > requirements.txt
+pip install -r requirements.txt
+
+
+## Docker 명령어 ##
+1. Docker 버전 확인 : 
+    docker --version
+
+2. Docker Compose 버전 확인 : 
+    docker compose version
+
+3. Docker 이미지 빌드 : 
+    docker compose build
+    - Docker file read
+    - 지정 Python 기반 이미지 준비
+    - requirements.txt에 정의된 패키지 설치
+    - Flask 애플리케이션 코드를 이미지에 복사
+    - 실행 가능한 Docker 이미지를 생성
+4. Flask 서버 실행 : 
+    docker compose up -d
+    - up : 서비스를 생성하고 실행 함
+    - -d : 백그라운드로 실행
+5. 컨테이너 실행상태 확인 : 
+    docker compose ps
+    docker compose ps -a
+6. 실행중인 모든 컨테이너 확인 : 
+    docker ps
+7. 코드 수정후 리빌드 : 
+    docker compose up -d --build
+8. 로그 확인 : 
+    docker compose logs -f flask-server
+    docker compose logs --tail=100 flask-server
+9. 서버 중지 : 
+    docker compose down
+10. 포튼연결 확인 :
+    docker port flask-server
+
+
+# 컨테이너 다시 생성하려면
+  docker compose down               : 컨테이너 중지
+  docker compose up -d --build      : 컨테이너 재 실행    
